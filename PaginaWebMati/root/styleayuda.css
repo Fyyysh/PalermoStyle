@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+}
+
+:root{
+    --black: rgb(0,0,0);
+    --white: rgb(255,255,255);
+    --blue: rgba(0, 13, 255);
+    --bluel: rgb(62, 126, 254);
+    --grayl: rgba(0, 0, 0, 0.1);
+    --gray: rgb(128, 128, 128);
+    --red: rgb(255, 0, 0);
+}
+
+button{
+    border: none;
+    box-shadow: none;
+    background-color: whitesmoke;
+}
+
+#midup{
+    display: flex;
+    padding-top: 3%;
+    padding-left: 15%;
+}
+
+#mid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 65%;
+}
+
+#mid2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+}
+
+.link{
+    text-decoration: none;
+    color: var(--black);
+}
+
+.compras-panel {
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.compras-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+.compras-item:last-child {
+    border-bottom: none;
+}
+
+.compras-item:hover {
+    border-left: 2px solid var(--black);
+    background-color: #f0f0f0;
+}
+
+.icon {
+    font-size: 30px;
+    margin-right: 20px;
+    color: #fbbd08;
+}
+
+.compras-text h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.compras-text p {
+    font-size: 14px;
+    color: #666;
+}

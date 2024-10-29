@@ -1,0 +1,104 @@
+.d-block{
+    width: 100%;
+    height: 500px;
+}
+
+#data{
+    height: 160px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+}
+
+#datainfo1{
+    display: flex;
+    width: 360px;
+    gap: 20px;
+}
+
+.datainfo2{
+    width: 360px;
+    display: flex;
+    gap: 20px;
+    padding-left: 50px;
+    border-left: solid 2px var(--gray);
+}
+
+.datatext{
+    display: flex;
+    flex-direction: column;
+}
+
+.tittledata{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    font-weight: 700;
+}
+
+.txtdata{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+}
+
+.boxproduct{
+    display: flex;
+    height: 360px;
+    gap: 30px;
+}
+
+#imgproduct1{
+    background-image: url(./img/trajeboxjpg);
+    background-size: cover;
+    background-repeat: none;
+    height: 360px;
+    width: 360px;
+}
+
+#imgproduct2{
+    background-image: url(./img/trajeclasico.jpg);
+    background-repeat: none;
+    height: 360px;
+    width: 360px;
+    background-size: cover;
+}
+
+#imgproduct3{
+    background-image: url(./img/Alternativo.jpg);
+    background-repeat: none;
+    height: 360px;
+    width: 360px;
+    background-size: cover;
+}
+
+#imgproduct1:hover, #imgproduct2:hover, #imgproduct3:hover {
+    transition: 0.8ms;
+    filter: brightness(0.8);
+}
+
+.imgproductdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding-top: 150px;
+}
+
+.imgproductlink{
+    text-decoration: none;
+}
+
+.imgproductbigtxt{
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+    color: var(--white);
+}
+
+.imgproductshorttxt{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    filter: brightness(1);
+    background-color: var(--red);
+    padding: 20px;
+    color: var(--white);
+}

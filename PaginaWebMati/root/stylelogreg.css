@@ -1,0 +1,165 @@
+:root{
+    --black: rgb(0,0,0);
+    --blackl: rgba(0, 0, 0, 0.925);
+    --white: rgb(255,255,255);
+    --blue: rgba(0, 13, 255);
+    --bluel: rgb(62, 126, 254);
+    --grayl: rgba(0, 0, 0, 0.1);
+    --gray: rgb(128, 128, 128);
+    --red: rgb(255, 0, 0);
+}
+
+#ubication{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+#ubication2{
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 4%;
+}
+
+#box{
+    width: 350px;
+    height: 360px;
+    border-radius: 20px;
+    background-color: rgb(245, 245, 245);
+}
+
+#box2{
+    width: 350px;
+    height: 680px;
+    border-radius: 20px;
+    background-color: rgb(245, 245, 245);
+}
+
+#textacomodaiton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding-top: 10%;
+}
+
+.text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#textbig{
+    font-size: x-large;
+    font-weight: 800;
+}
+
+#under{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#data{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#passwordcont{
+    display: flex;
+    border-bottom: 2px solid var(--gray);
+}
+
+.inputs{
+    border: none;
+    background-color: rgb(245, 245, 245);
+    border-bottom: 2px solid var(--gray);
+    text-decoration: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+#inputss{
+    width: 230px;
+    border: none;
+    background-color: rgb(245, 245, 245);
+}
+
+#inputss2{
+    width: 230px;
+    border: none;
+    background-color: rgb(245, 245, 245);
+}
+
+#imag{
+    display: flex;
+}
+
+.icon{
+    border: none;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.boxcheck{
+    cursor: pointer;
+}
+
+#doble{
+    display: flex;
+    gap: 40px;
+}
+
+#remember{
+    display: flex;
+    gap: 5px;
+}
+
+#textmini{
+    display: flex;
+    gap: 10px;
+}
+
+.textmini{
+    font-size: smaller;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+#butlog{
+    display: flex;
+    justify-content: center;
+}
+
+#but{
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    border-radius: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    font-weight: 550;
+}
+
+.link{
+    color: rgba(52, 52, 241, 0.788);
+}
+
+#text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#change{
+    display: flex;
+    justify-content: center;
+}

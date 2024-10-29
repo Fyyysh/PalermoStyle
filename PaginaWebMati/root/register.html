@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="./img/logoo" type="image/x-icon">
+    <link rel="stylesheet" href="stylebase.css">
+    <link rel="stylesheet" href="stylelogreg.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!DOCTYPE html> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Palermo Style • Register</title>
+</head>
+<body>
+    <header>
+        <div id="head">
+            <div id="headpart1">
+                <a class="link"
+                href="./Inicio.html"
+                target="_self"
+                rel="noopeer noreferrer"
+                >
+                    <img id="logo"
+                        src="./img/logoo"
+                        alt="logo"
+                    >
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="ubication2">
+            <div id="box2">
+                <div id="textacomodaiton">
+                    <p class="text" id="textbig">
+                        Registrarse
+                    </p>
+                    <div id="under">
+                        <div>
+                            <form id="data" action="formregister.php" method="post">
+                                    <input class="inputs" type="number" placeholder="DNI" name="dni"required>
+                                    <input class="inputs" type="text" placeholder="Nombre" name="nombre" required>
+                                    <input class="inputs" type="text" placeholder="Apellido" name="apellido" required> 
+                                    <input class="inputs" type="email" placeholder="Mail" name="mail"required>
+                                    <input class="inputs" type="number" placeholder="Telefono" name="telefono" required>
+                                    <div id="passwordcont">
+                                        <input id="inputss" type="password" placeholder="Contraseña" name="contraseña" required>
+                                        <div id="imag">
+                                            <img
+                                            src="./img/login_register/bx-hide.svg"
+                                            id="pass-icon"
+                                            class="icon"
+                                            onclick="pass()">
+                                        </div>
+                                    </div>
+                                    <div id="passwordcont">
+                                        <input id="inputss2" type="password" placeholder="Confirmar contraseña" name="contraseña2" required>
+                                        <div id="imag">
+                                            <img
+                                            src="./img/login_register/bx-hide.svg"
+                                            id="pass-icon2"
+                                            class="icon"
+                                            onclick="pass2()">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="doble">
+                                    <div id="remember">
+                                        <input class="boxcheck" type="checkbox">
+                                        <p class="textmini">
+                                            Recordarme
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="butlog">
+                                    <a
+                                    href=""
+                                    target="_self"
+                                    rel="noopeer noreferrer"
+                                    >
+                                    <button id="but" type="submit">
+                                        Acceder
+                                    </button>
+                                </a>
+                            </form>
+                        </div>
+                        <div id="change">
+                            <a
+                                href="./login.html"
+                                target="_self"
+                                rel="noopeer noreferrer"
+                                >
+                                ¿Ya tienes cuenta? Inicia Sesion
+                            </a>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </main>
+    <script src="logreg.js"></script>
+</body>
+</html>

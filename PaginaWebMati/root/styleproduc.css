@@ -1,0 +1,77 @@
+:root{
+    --black: rgb(0,0,0);
+    --white: rgb(255,255,255);
+    --blue: rgba(0, 13, 255);
+    --bluel: rgb(62, 126, 254);
+    --grayl: rgba(0, 0, 0, 0.1);
+    --gray: rgb(128, 128, 128);
+    --red: rgb(255, 0, 0);
+    --dred: rgba(255, 0, 0, 0.637);
+}
+
+body {
+	background: #e2eaef;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a{
+    color: var(--black) !important;
+    text-decoration: none !important;
+}
+
+.df{
+    display: flex;
+    padding-bottom: 60px;
+}
+
+#left{
+    width: 250px;
+    height: 719px;
+}
+
+#right{
+    width: 923px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1%;
+    padding-left: 20px;
+}
+
+#filter1a{
+    display: none;
+}
+
+#filter1b{
+    display: none;
+}
+
+#filter1c{
+    display: none;
+}
+
+#filter2a{
+    display: none;
+}
+
+#filter2b{
+    display: none;
+}
+
+#filter3a{
+    display: none;
+}
+
+#filter4a{
+    display: none;
+}
+
+.box{
+    height: 250px;
+    width: 200px;
+    gap: 5%;
+}
+
+.imgproductos{
+    height: 90%;
+    width: 100%;
+}
