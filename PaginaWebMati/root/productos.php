@@ -2,15 +2,14 @@
 $query = "select PrecioR, NombreArchivoR, GeneroR, TipoR, SubtipoR from Ropa";
 
 if(isset($_GET["genero"])){
-    $query = $query . "where GeneroR = '".$_GET["genero"]."' ";
+    $query = $query . " where GeneroR = '".$_GET["genero"]."'";
     if(isset($_GET["tipo"])){
-        $query = $query . "and TipoR = '".$_GET["tipo"]."' ";
+        $query = $query . " and TipoR = '".$_GET["tipo"]."' ";
         if(isset($_GET["subtipo"])){
-            $query = $query . "and SubtipoR = '".$_GET["subtipo"]."' ";
+            $query = $query . " and SubtipoR = '".$_GET["subtipo"]."' ";
         }
     }
 }
-
 ?>
 
 <html lang="en">
@@ -77,7 +76,7 @@ if(isset($_GET["genero"])){
                                 <ul>
                                     <li>
                                         <a class="midtext"
-                                        href="./productos.php?genero=hombre?tipo=trajes"
+                                        href="./productos.php?genero=hombre&tipo=trajes"
                                         target="_self"
                                         rel="noopeer noreferrer"
                                         >
@@ -86,7 +85,7 @@ if(isset($_GET["genero"])){
                                     </li>
                                     <li>
                                         <a class="midtext"
-                                        href="./productos.php?genero=hombre?tipo=camisas"
+                                        href="./productos.php?genero=hombre&tipo=camisa"
                                         target="_self"
                                         rel="noopeer noreferrer">
                                         Camisas
@@ -94,7 +93,7 @@ if(isset($_GET["genero"])){
                                     </li>
                                     <li>
                                         <a class="midtext"
-                                        href="./productos.php?genero=hombre?tipo=pantalones"
+                                        href="./productos.php?genero=hombre&tipo=pantalones"
                                         target="_self"
                                         rel="noopeer noreferrer">
                                         Pantalones
@@ -102,7 +101,7 @@ if(isset($_GET["genero"])){
                                     </li>
                                     <li>
                                         <a class="midtext"
-                                        href="./productos.php?genero=hombre?tipo=calzado"
+                                        href="./productos.php?genero=hombre&tipo=calzado"
                                         target="_self"
                                         rel="noopeer noreferrer"
                                         >
@@ -122,7 +121,7 @@ if(isset($_GET["genero"])){
                                 <ul>
                                     <li>
                                         <a class="midtext"
-                                        href="./productos.php?genero=mujer?tipo=trajes"
+                                        href="./productos.php?genero=mujer&tipo=trajes"
                                         target="_self"
                                         rel="noopeer noreferrer"
                                         >
@@ -131,7 +130,7 @@ if(isset($_GET["genero"])){
                                     </li>
                                     <li>
                                         <a class="midtext"
-                                        href="./productos.php?genero=mujer?tipo=camisas"
+                                        href="./productos.php?genero=mujer&tipo=camisa"
                                         target="_self"
                                         rel="noopeer noreferrer">
                                         Camisas
@@ -139,7 +138,7 @@ if(isset($_GET["genero"])){
                                     </li>
                                     <li>
                                         <a class="midtext"
-                                        href="./productos.php?genero=mujer?tipo=pantalones"
+                                        href="./productos.php?genero=mujer&tipo=pantalones"
                                         target="_self"
                                         rel="noopeer noreferrer">
                                         Pantalones
@@ -147,7 +146,7 @@ if(isset($_GET["genero"])){
                                     </li>
                                     <li>
                                         <a class="midtext"
-                                        href="./productos.php?genero=mujer?tipo=calzado"
+                                        href="./productos.php?genero=mujer&tipo=calzado"
                                         target="_self"
                                         rel="noopeer noreferrer"
                                         >
@@ -167,7 +166,7 @@ if(isset($_GET["genero"])){
                                 <ul>
                                     <li>
                                         <a class="midtext"
-                                        href="./productos.php?genero=ninios?tipo=trajes"
+                                        href="./productos.php?genero=ninios&tipo=trajes"
                                         target="_self"
                                         rel="noopeer noreferrer"
                                         >
@@ -176,15 +175,15 @@ if(isset($_GET["genero"])){
                                     </li>
                                     <li>
                                         <a class="midtext"
-                                        href="./productos.php?genero=ninios?tipo=camisas"
+                                        href="./productos.php?genero=ninios&tipo=camisa"
                                         target="_self"
                                         rel="noopeer noreferrer">
-                                        Camisas
+                                        camisa
                                     </a>
                                     </li>
                                     <li>
                                         <a class="midtext"
-                                        href="./productos.php?genero=ninios?tipo=pantalones"
+                                        href="./productos.php?genero=ninios&tipo=pantalones"
                                         target="_self"
                                         rel="noopeer noreferrer">
                                         Pantalones
@@ -192,7 +191,7 @@ if(isset($_GET["genero"])){
                                     </li>
                                     <li>
                                         <a class="midtext"
-                                        href="./productos.php?genero=ninios?tipo=calzado"
+                                        href="./productos.php?genero=ninios&tipo=calzado"
                                         target="_self"
                                         rel="noopeer noreferrer"
                                         >
@@ -212,7 +211,7 @@ if(isset($_GET["genero"])){
                                 <ul>
                                     <li>
                                         <a class="midtext"
-                                        href="./productos.php?genero=accesorios?tipo=cinturon"
+                                        href="./productos.php?genero=accesorios&tipo=cinturon"
                                         target="_self"
                                         rel="noopeer noreferrer"
                                         >
@@ -221,7 +220,7 @@ if(isset($_GET["genero"])){
                                     </li>
                                     <li>
                                         <a class="midtext"
-                                        href="./productos.php?genero=accesorios?tipo=corbata"
+                                        href="./productos.php?genero=accesorios&tipo=corbata"
                                         target="_self"
                                         rel="noopeer noreferrer"
                                         >
@@ -230,7 +229,7 @@ if(isset($_GET["genero"])){
                                     </li>
                                     <li>
                                         <a class="midtext"
-                                        href="./productos.php?genero=accesorios?tipo=monio"
+                                        href="./productos.php?genero=accesorios&tipo=monio"
                                         target="_self"
                                         rel="noopeer noreferrer"
                                         >
@@ -239,7 +238,7 @@ if(isset($_GET["genero"])){
                                     </li>
                                     <li>
                                         <a class="midtext"
-                                        href="./productos.php?genero=accesorios?tipo=tirantes"
+                                        href="./productos.php?genero=accesorios&tipo=tirantes"
                                         target="_self"
                                         rel="noopeer noreferrer"
                                         >
@@ -321,7 +320,7 @@ if(isset($_GET["genero"])){
                         <ul id="filter1a">
                             <li>
                                 <a 
-                                href="./productos.php?genero=hombre?tipo=trajes"
+                                href="./productos.php?genero=hombre&tipo=trajes"
                                 target="_self"
                                 rel="noopeer noreferrer"
                                 >
@@ -336,7 +335,7 @@ if(isset($_GET["genero"])){
                                 <ul id="filter1b">
                                     <li>
                                         <a 
-                                        href="./productos.php?genero=hombre?tipo=trajes?subtipo=estilo"
+                                        href="./productos.php?genero=hombre&tipo=trajes&subtipo=estilo"
                                         target="_self"
                                         rel="noopeer noreferrer"
                                         >
@@ -345,7 +344,7 @@ if(isset($_GET["genero"])){
                                     </li>
                                     <li>
                                         <a 
-                                        href="./productos.php?genero=hombre?tipo=trajes?subtipo=clasicos"
+                                        href="./productos.php?genero=hombre&tipo=trajes&subtipo=clasicos"
                                         target="_self"
                                         rel="noopeer noreferrer"
                                         >
@@ -356,7 +355,7 @@ if(isset($_GET["genero"])){
                             </li>
                             <li>
                                 <a 
-                                href="./productos.php?genero=hombre?tipo=camisas"
+                                href="./productos.php?genero=hombre&tipo=camisa"
                                 target="_self"
                                 rel="noopeer noreferrer"
                                 >
@@ -365,7 +364,7 @@ if(isset($_GET["genero"])){
                             </li>
                             <li>
                                 <a
-                                href="./productos.php?genero=hombre?tipo=pantalones"
+                                href="./productos.php?genero=hombre&tipo=pantalones"
                                 target="_self"
                                 rel="noopeer noreferrer"
                                 >
@@ -374,7 +373,7 @@ if(isset($_GET["genero"])){
                             </li>
                             <li>
                                 <a 
-                                href="./productos.php?genero=hombre?tipo=calzado"
+                                href="./productos.php?genero=hombre&tipo=calzado"
                                 target="_self"
                                 rel="noopeer noreferrer"
                                 >
@@ -388,7 +387,7 @@ if(isset($_GET["genero"])){
                                 <ul id="filter1c">
                                     <li>
                                         <a 
-                                        href="./productos.php?genero=hombre?tipo=calzado?subtipo=triangular"
+                                        href="./productos.php?genero=hombre&tipo=calzado&subtipo=triangular"
                                         target="_self"
                                         rel="noopeer noreferrer"
                                         >
@@ -397,9 +396,9 @@ if(isset($_GET["genero"])){
                                     </li>
                                     <li>
                                         <a 
-                                        href="./productos.php?genero=hombre?tipo=calzado?subtipo=cuadrada"
+                                        href="./productos.php?genero=hombre&tipo=calzado&subtipo=cuadrada"
                                         target="_self"
-                                        ?genero=mujer?tipo=pantalones            rel="noopeer noreferrer"
+                                        rel="noopeer noreferrer"
                                         >
                                             Punta Cuadrada
                                         </a>
@@ -424,7 +423,7 @@ if(isset($_GET["genero"])){
                         <ul id="filter2a">
                             <li>
                                 <a
-                                href="./productos.php?genero=mujer?tipo=trajes"
+                                href="./productos.php?genero=mujer&tipo=trajes"
                                 target="_self"
                                 rel="noopeer noreferrer"
                                 >
@@ -433,7 +432,7 @@ if(isset($_GET["genero"])){
                             </li>
                             <li>
                                 <a 
-                                href="./productos.php?genero=mujer?tipo=camisas"
+                                href="./productos.php?genero=mujer&tipo=camisa"
                                 target="_self"
                                 rel="noopeer noreferrer"
                                 >
@@ -442,7 +441,7 @@ if(isset($_GET["genero"])){
                             </li>
                             <li>
                                 <a 
-                                href="./productos.php?genero=mujer?tipo=pantalones"
+                                href="./productos.php?genero=mujer&tipo=pantalones"
                                 target="_self"
                                 rel="noopeer noreferrer"
                                 >
@@ -451,7 +450,7 @@ if(isset($_GET["genero"])){
                             </li>
                             <li>
                                 <a 
-                                href="./productos.php?genero=mujer?tipo=calzado"
+                                href="./productos.php?genero=mujer&tipo=calzado"
                                 target="_self"
                                 rel="noopeer noreferrer"
                                 >
@@ -466,7 +465,7 @@ if(isset($_GET["genero"])){
                                 <ul id="filter2b">
                                     <li>
                                         <a 
-                                        href="./productos.php?genero=mujer?tipo=calzado?subtipo=alto"
+                                        href="./productos.php?genero=mujer&tipo=calzado&subtipo=alto"
                                         target="_self"
                                         rel="noopeer noreferrer"
                                         >
@@ -475,7 +474,7 @@ if(isset($_GET["genero"])){
                                     </li>
                                     <li>
                                         <a 
-                                        href="./productos.php?genero=mujer?tipo=calzado?subtipo=bajo"
+                                        href="./productos.php?genero=mujer&tipo=calzado&subtipo=bajo"
                                         target="_self"
                                         rel="noopeer noreferrer"
                                         >
@@ -502,7 +501,7 @@ if(isset($_GET["genero"])){
                         <ul id="filter3a">
                             <li>
                                 <a 
-                                href="./productos.php?genero=ninios?tipo=trajes"
+                                href="./productos.php?genero=ninios&tipo=trajes"
                                 target="_self"
                                 rel="noopeer noreferrer"
                                 >
@@ -511,16 +510,16 @@ if(isset($_GET["genero"])){
                             </li>
                             <li>
                                 <a 
-                                href="./productos.php?genero=ninios?tipo=camisas"
+                                href="./productos.php?genero=ninios&tipo=camisa"
                                 target="_self"
                                 rel="noopeer noreferrer"
                                 >
-                                    Camisas
+                                    camisa
                                 </a>
                             </li>
                             <li>
                             <a 
-                                href="./productos.php?genero=ninios?tipo=pantalones"
+                                href="./productos.php?genero=ninios&tipo=pantalones"
                                 target="_self"
                                 rel="noopeer noreferrer"
                                 >
@@ -545,7 +544,7 @@ if(isset($_GET["genero"])){
                         <ul id="filter4a">
                             <li>
                                 <a
-                                href="./productos.php?genero=accesorios?tipo=cinturon"
+                                href="./productos.php?genero=accesorios&tipo=cinturon"
                                 target="_self"
                                 rel="noopeer noreferrer"
                                 >
@@ -554,7 +553,7 @@ if(isset($_GET["genero"])){
                             </li>
                             <li>
                                 <a
-                                href="./productos.php?genero=accesorios?tipo=corbata"
+                                href="./productos.php?genero=accesorios&tipo=corbata"
                                 target="_self"
                                 rel="noopeer noreferrer"
                                 >
@@ -563,7 +562,7 @@ if(isset($_GET["genero"])){
                             </li>
                             <li>
                                 <a
-                                href="./productos.php?genero=accesorios?tipo=monio"
+                                href="./productos.php?genero=accesorios&tipo=monio"
                                 target="_self"
                                 rel="noopeer noreferrer"
                                 >
@@ -572,7 +571,7 @@ if(isset($_GET["genero"])){
                             </li>
                             <li>
                                 <a
-                                href="./productos.php?genero=accesorios?tipo=tirantes"
+                                href="./productos.php?genero=accesorios&tipo=tirantes"
                                 target="_self"
                                 rel="noopeer noreferrer"
                                 >
