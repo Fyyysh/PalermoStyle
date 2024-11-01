@@ -33,7 +33,7 @@ if(isset($_GET["genero"])){
         <div id="head">
             <div id="headpart1">
                 <a class="link"
-                href="./Inicio.html"
+                href="./Inicio.php"
                 target="_self"
                 rel="noopeer noreferrer"
                 >
@@ -46,7 +46,7 @@ if(isset($_GET["genero"])){
             <div id="headpart2">
                 <div id="subheadpart2">
                     <a class="upizq"
-                    href="./Inicio.html"
+                    href="./Inicio.php"
                     target="_self"
                     rel="noopeer noreferrer"
                     >
@@ -269,7 +269,15 @@ if(isset($_GET["genero"])){
                     <input id="searchbarin" type="text" placeholder="Buscar">
                 </div>
                 <a
-                    href="./login.html"
+                <?php
+                if(isset($_SESSION["iniciada"]) && $_SESSION["iniciada"] ){
+                    echo 'href="./deslog.php"';
+                }
+                else{
+                    echo 'href="./login.html"';
+
+                }
+                ?>
                     target="_self"
                     rel="noopeer noreferrer"
                 >
@@ -598,13 +606,15 @@ if(isset($_GET["genero"])){
                         $resultado=mysqli_query($conexion, $query);
                         while($fila=mysqli_fetch_assoc($resultado)){
                         ?>
-                <div class="box">
+                <div class="card">
                     <img class="imgproductos"
                         src="./img/productos/<?php echo $fila["NombreArchivoR"]?>"
                     >
-                    <p class="txtprecio">
-                        Precio: <?php echo $fila["PrecioR"]?>
+                    <h1><?php echo $fila["NombreR"] ?></h1>
+                    <p class="price">
+                        Precio: $<?php echo $fila["PrecioR"]?>
                     </p>
+                    <p><button>Agregar al Carrito</button></p>
                 </div>
                 <?php
                         }
@@ -622,7 +632,7 @@ if(isset($_GET["genero"])){
                     </li>
                     <li>
                         <a class="footullia"
-                        href="./Inicio.html"
+                        href="./Inicio.php"
                         target="_self"
                         rel="noopeer noreferrer"
                     >

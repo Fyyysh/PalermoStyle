@@ -23,7 +23,7 @@
             if ($password === $fila["ContraseñaC"]) {
                 session_start();
                 $_SESSION["iniciada"] = true;
-                header("Location: Inicio.html");
+                header("Location: Inicio.php");
             } 
             else {
                 header("Location: login.html?error=ContraseñaIncorrecta");

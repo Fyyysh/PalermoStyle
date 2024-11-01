@@ -23,7 +23,7 @@
             $resultado=mysqli_query($conexion, $query);
             session_start();
             $_SESSION["iniciada"] = true;
-            header("location:Inicio.html");
+            header("location:Inicio.php");
             // Aquí puedes proceder a guardar la contraseña, preferiblemente cifrada con password_hash()
             // Ejemplo: $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         }
