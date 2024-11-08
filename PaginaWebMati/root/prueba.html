@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selección de Tallas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .talla-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      max-width: 300px;
+      margin: auto;
+    }
+    .talla {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .talla.activa {
+      background-color: #000;
+      color: #fff;
+    }
+    .talla.disabled {
+      color: #999;
+      border-color: #ddd;
+      cursor: not-allowed;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Seleccione su Talla</h2>
+<div class="talla-container">
+  <div class="talla" onclick="seleccionarTalla(this)">34.5 (UK 3.5)</div>
+  <div class="talla" onclick="seleccionarTalla(this)">35.5 (UK 4)</div>
+  <div class="talla" onclick="seleccionarTalla(this)">36 (UK 4.5)</div>
+  <div class="talla" onclick="seleccionarTalla(this)">36.5 (UK 5)</div>
+  <div class="talla" onclick="seleccionarTalla(this)">37.5 (UK 5.5)</div>
+  <div class="talla" onclick="seleccionarTalla(this)">38 (UK 6)</div>
+  <div class="talla" onclick="seleccionarTalla(this)">38.5 (UK 6.5)</div>
+  <div class="talla" onclick="seleccionarTalla(this)">39 (UK 7)</div>
+  <div class="talla" onclick="seleccionarTalla(this)">39.5 (UK 7.5)</div>
+  <div class="talla" onclick="seleccionarTalla(this)">40 (UK 8)</div>
+  <div class="talla" onclick="seleccionarTalla(this)">41 (UK 8.5)</div>
+  <div class="talla" onclick="seleccionarTalla(this)">42 (UK 9)</div>
+  <div class="talla" onclick="seleccionarTalla(this)">42.5 (UK 9.5)</div>
+  <div class="talla" onclick="seleccionarTalla(this)">43 (UK 10)</div>
+  <div class="talla" onclick="seleccionarTalla(this)">43.5 (UK 10.5)</div>
+  <div class="talla" onclick="seleccionarTalla(this)">44 (UK 11)</div>
+  <div class="talla" onclick="seleccionarTalla(this)">45 (UK 11.5)</div>
+  <div class="talla" onclick="seleccionarTalla(this)">45.5 (UK 12)</div>
+  <div class="talla" onclick="seleccionarTalla(this)">46 (UK 12.5)</div>
+  <div class="talla" onclick="seleccionarTalla(this)">47 (UK 13)</div>
+</div>
+
+<script>
+function seleccionarTalla(elemento) {
+    // Desactivar cualquier talla seleccionada previamente
+    document.querySelectorAll('.talla').forEach(t => t.classList.remove('activa'));
+    // Marcar la talla seleccionada
+    elemento.classList.add('activa');
+}
+</script>
+
+</body>
+</html>

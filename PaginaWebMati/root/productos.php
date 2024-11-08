@@ -1,7 +1,10 @@
 <?php 
-$query = "select PrecioR, NombreArchivoR, GeneroR, TipoR, SubtipoR from Ropa";
+$query = "select CodigoR, PrecioR, NombreR, NombreArchivoR, GeneroR, TipoR, SubtipoR from Ropa";
 
-if(isset($_GET["genero"])){
+if(isset($_GET["tipo"]) && $_GET["tipo"] == "camisa"){
+    $query = $query . " where TipoR = '".$_GET["tipo"]."' ";
+}
+else if(isset($_GET["genero"])){
     $query = $query . " where GeneroR = '".$_GET["genero"]."'";
     if(isset($_GET["tipo"])){
         $query = $query . " and TipoR = '".$_GET["tipo"]."' ";
@@ -10,6 +13,9 @@ if(isset($_GET["genero"])){
         }
     }
 }
+
+session_start();
+
 ?>
 
 <html lang="en">
@@ -250,7 +256,7 @@ if(isset($_GET["genero"])){
                         </div>
                     </div>
                     <a class="upizq"
-                    href="./ayuda.html"
+                    href="./ayuda.php"
                     target="_self"
                     rel="noopeer noreferrer"
                     >
@@ -607,14 +613,33 @@ if(isset($_GET["genero"])){
                         while($fila=mysqli_fetch_assoc($resultado)){
                         ?>
                 <div class="card">
-                    <img class="imgproductos"
+                    <img 
+                    <?php
+                        if($fila["NombreArchivoR"] == "CinturonNegroHebillaPersonalizada.png" || $fila["NombreArchivoR"] == "CamisaNiñoNegraBlanca.png" ){
+                            echo 'class="imgproductos2"';
+                        }
+                        else if($fila["GeneroR"] == "hombre" && $fila["TipoR"] == "trajes"){
+                            echo 'class="imgproductos2"';
+                        }
+                        else{
+                            echo 'class="imgproductos1"';
+                        }
+                    ?>
                         src="./img/productos/<?php echo $fila["NombreArchivoR"]?>"
                     >
                     <h1><?php echo $fila["NombreR"] ?></h1>
                     <p class="price">
                         Precio: $<?php echo $fila["PrecioR"]?>
                     </p>
-                    <p><button>Agregar al Carrito</button></p>
+                    <p>
+                        <a
+                        href="./producto.php?codigop=<?php echo $fila["CodigoR"]?>"
+                        
+                        target="_self"
+                        rel="noopeer noreferrer"
+                        >
+                            <button>Ver producto</button></p>
+                        </a>
                 </div>
                 <?php
                         }
@@ -654,7 +679,7 @@ if(isset($_GET["genero"])){
                     </li>
                     <li>
                         <a class="footullia"
-                        href="./ayuda.html"
+                        href="./ayuda.php"
                         target="_self"
                         rel="noopeer noreferrer"
                     >

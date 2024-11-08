@@ -50,7 +50,7 @@ session_start();
                         target="_self"
                         rel="noopeer noreferrer"
                         >
-                            <p class="upizqtxt" id="upizqp">
+                            <p class="upizqtxt">
                                 Productos
                             </p>
                         </a>
@@ -240,11 +240,11 @@ session_start();
                         </div>
                     </div>
                     <a class="upizq"
-                    href="./ayuda.html"
+                    href="./ayuda.php"
                     target="_self"
                     rel="noopeer noreferrer"
                     >
-                        <p class="upizqtxt">
+                        <p class="upizqtxt" id="upizqp">
                             Ayuda
                         </p>
                     </a>
@@ -284,7 +284,7 @@ session_start();
     <main>
         <div id="midup">
             <a class="link"
-            href="./ayuda.html"
+            href="./ayuda.php"
             target="_self"
             rel="noopeer noreferrer"
             >
@@ -294,7 +294,7 @@ session_start();
         <div id="mid">    
             <div>
                 <div class="compras-panel">
-                    <a
+                    <a class="link"
                         <?php
                             if(isset($_SESSION["iniciada"]) && $_SESSION["iniciada"] ){
                                 echo 'href=""';
@@ -315,7 +315,7 @@ session_start();
                         </div>
                     </a>
                     <a class="link"
-                    href="./ayudaRF.html"
+                    href="./ayudaRF.php"
                     target="_self"
                     rel="noopeer noreferrer"
                     >
@@ -328,7 +328,7 @@ session_start();
                         </div>
                     </a>
                     <a class="link"
-                    href="./ayudaFaQ.html"
+                    href="./ayudaFaQ.php"
                     target="_self"
                     rel="noopeer noreferrer"
                     >
@@ -375,7 +375,7 @@ session_start();
                     </li>
                     <li>
                         <a class="footullia"
-                        href="./ayuda.html"
+                        href="./ayuda.php"
                         target="_self"
                         rel="noopeer noreferrer"
                     >

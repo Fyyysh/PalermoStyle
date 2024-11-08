@@ -1,26 +1,61 @@
 <?php
 session_start();
+
+// Verificar si se ha proporcionado el ID del producto a través de GET
+if (isset($_GET['codigop'])) {
+    $producto_id = $_GET['codigop'];
+    
+    // Definir la consulta después de haber recibido el ID
+    $servername = "127.0.0.1";
+    $database = "PalermoStyle";
+    $username = "alumno";
+    $password = "alumnoipm";
+
+    // Establecer la conexión a la base de datos
+    $conexion = mysqli_connect($servername, $username, $password, $database);
+    if (!$conexion) {
+        die("Conexión fallida: " . mysqli_connect_error());
+    }
+    else{
+        $query = "select CodigoR, PrecioR, NombreR, NombreArchivoR, GeneroR, TipoR, SubtipoR from Ropa where CodigoR = $producto_id";
+        $query2 = "select * from Ropa_has_Talle_has_Modelo_has_Color where Ropa_CodigoRTM = $producto_id";
+        $resultado = mysqli_query($conexion, $query);
+        $resultado2 = mysqli_query($conexion, $query2);
+
+        if ($resultado) {
+        // Obtener el primer resultado
+            $fila = mysqli_fetch_assoc($resultado);
+        } 
+        else {
+            echo "Error en la consulta1: " . mysqli_error($conexion);
+        }
+        if ($resultado2) {
+            // Obtener el segundo resultado
+                $fila2 = mysqli_fetch_assoc($resultado2);
+            } 
+            else {
+                echo "Error en la consulta2: " . mysqli_error($conexion);
+            }
+    }
+}
 ?>
 
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="./img/logoo" type="image/x-icon">
+    <link rel="stylesheet" href="stylebase.css">
+    <link rel="stylesheet" href="styleproducunico.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="./img/logoo" type="image/x-icon">
-    <link rel="stylesheet" href="stylebase.css">
-    <link rel="stylesheet" href="styleinicio.css">
-    <link rel="stylesheet" href="stylec.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-    <title>Palermo Style • Inicio</title>
+    <title>Palermo Style • Productos</title>
+
 </head>
 <body>
     <header>
@@ -44,7 +79,7 @@ session_start();
                     target="_self"
                     rel="noopeer noreferrer"
                     >
-                        <p class="upizqtxt" id="upizqp">
+                        <p class="upizqtxt">
                             Inicio
                         </p>
                     </a>
@@ -54,7 +89,7 @@ session_start();
                         target="_self"
                         rel="noopeer noreferrer"
                         >
-                            <p class="upizqtxt">
+                            <p class="upizqtxt" id="upizqp">
                                 Productos
                             </p>
                         </a>
@@ -294,245 +329,89 @@ session_start();
         </div>
     </header>
     <main>
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="5000">
-                    <img src="./img/a.webp" class="d-block" alt="banner1">
-                </div>
-                <div class="carousel-item" data-bs-interval="5000">
-                    <img src="./img/a2.webp" class="d-block" alt="banner2">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        <div id="data">
-            <div id="datainfo1">
-                <img
-                src="./img/bxs-truck.svg"
-                alt="camion"
-            >
-                <div class="datatext">
-                    <h3 class="tittledata">
-                        ENVIAMOS TU COMPRA GRATIS
-                    </h3>
-                    <p class="txtdata">
-                        A partir de $50.000
-                    </p>
-                </div>
-            </div>
-            <div class="datainfo2">
-                <img
-                src="./img/bx-credit-card.svg"
-                alt="tarjeta"
-            >
-                <div class="datatext">
-                    <h1 class="tittledata">
-                        PAGÁ COMO QUIERAS
-                    </h1>
-                    <p class="txtdata">
-                        3 y 6 cuotas sin interés
-                    </p>
-                </div>
-            </div>
-            <div class="datainfo2">
-                <img
-                src="./img/bx-lock-alt.svg"
-                alt="candado"
-            >
-                <div class="datatext">
-                    <h1 class="tittledata">
-                        COMPRÁ CON SEGURIDAD
-                    </h1>
-                    <p class="txtdata">
-                        Tus datos siempre protegidos
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="boxproduct">
-            <div id="imgproduct1">
-                <div class="imgproductdiv">
-                    <p class="imgproductbigtxt">
-                        CON ESTILO
-                    </p>
-                    <a class="imgproductlink"
-                        href="./productos.php?genero=hombre?tipo=trajes?subtipo=estilo"
-                        target="_self"
-                        rel="noopeer noreferrer"
+        <div id="center">
+            <div id="left">
+                <div id="img">
+                    <img 
+                        <?php
+                            if($fila["NombreArchivoR"] == "CinturonNegroHebillaPersonalizada.png" || $fila["NombreArchivoR"] == "CamisaNiñoNegraBlanca.png" ){
+                                echo 'class="imgproductos2"';
+                            } 
+                            else if($fila["GeneroR"] == "hombre" && $fila["TipoR"] == "trajes"){
+                                echo 'class="imgproductos2"';
+                            }
+                            else{
+                                echo 'class="imgproductos1"';
+                            }
+                        ?>
+                            src="./img/productos/<?php echo $fila["NombreArchivoR"]?>"
                     >
-                        <p class="imgproductshorttxt">
-                            VER MÁS
-                        </p>
-                    </a>
                 </div>
             </div>
-            <div id="imgproduct2">
-                <div class="imgproductdiv">
-                    <p class="imgproductbigtxt">
-                        CLÁSICOS
+            <div id="right">
+                <form id="rightform">
+                    <div>
+                        <p class=producttext>
+                            <?php
+                            echo $fila["NombreR"];
+                            ?>
                     </p>
-                    <a class="imgproductlink"
-                    href="./productos.php?genero=hombre?tipo=trajes?subtipo=clasicos"
-                    target="_self"
-                    rel="noopeer noreferrer"
-                    >
-                        <p class="imgproductshorttxt">
-                            VER MÁS
+                    </div>
+                    <div>
+                    <p class="pricetext">
+                        $
+                        <?php
+                                echo $fila["PrecioR"];
+                            ?>
                         </p>
-                    </a>
-                </div>
-            </div>
-            <div id="imgproduct3">
-                <div class="imgproductdiv">
-                    <p class="imgproductbigtxt">
-                        ALTERNATIVO
-                    </p>
-                    <a class="imgproductlink"
-                        href="./productos.php?"
-                        target="_self"
-                        rel="noopeer noreferrer"
-                    >
-                        <p class="imgproductshorttxt">
-                            VER MÁS
-                        </p>
-                    </a>
-                </div>
-            </div>
-        
-
-        </div>
-        <div class="row" id="row1">
-            <div class="col-md-12">
-                <h2>Productos  en <b>Oferta</b></h2>
-                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
-                <!-- Carousel indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>   
-                <!-- Wrapper for carousel items -->
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-                                    <div class="img-box">
-                                        <img src="./img/productos/CinturonCueroNegro.png" class="img-responsive" alt="">									
+                    </div>
+                    <div id="tallespace">
+                        <h4>Seleccione su Talla</h4>
+                        <div id="talles">
+                            <?php
+                            while($fila2=mysqli_fetch_assoc($resultado2)){
+                                ?>
+                                <div class="talle-container">
+                                    <div class="talle" onclick="seleccionarTalla(this)" name="talleselect">
+                                        <?php echo $fila2["Talle_NombreRTM"];
+                                        ?>
                                     </div>
-                                    <div class="thumb-content">
-                                        <h4>Cinturon Negro de Cuero</h4>									
-                                        <p class="item-price"><strike>$65000.0</strike> <b>$60000.0</b></p>
-                                        <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-                                    </div>						
                                 </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-                                    <div class="img-box">
-                                        <img src="./img/productos/MoñoNegro.png" class="img-responsive" alt="">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h4>Moño Negro</h4>
-                                        <p class="item-price"><strike>$28000.0</strike> <b>$25000.0</b></p>
-                                        <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-                                    </div>						
-                                </div>
-                            </div>		
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-                                    <div class="img-box">
-                                        <img src="./img/productos/TiranteAzul.png" class="img-responsive" alt="">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h4>Tirante Azul</h4>									
-                                        <p class="item-price"><strike>$35000.0</strike> <b>$30000.00</b></p>
-                                        <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-                                    </div>						
-                                </div>
-                            </div>								
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-                                    <div class="img-box">
-                                        <img src="./img/productos/Corbatas.png" class="img-responsive" alt="">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h4>Promo Corbatas</h4>									
-                                        <p class="item-price"><strike>$35000.00</strike> <b>$30000.0</b></p>
-                                        <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-                                    </div>						
-                                </div>
-                            </div>
+                            <?php
+                            }
+                            ?>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-                                    <div class="img-box">
-                                        <img src="./img/productos/PantalonMarronHombre.png" class="img-responsive" alt="">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h4>Pantalon Marron para Hombres</h4>
-                                        <p class="item-price"><strike>$75000.00</strike> <span>$70000.0</span></p>
-                                        <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-                                    </div>						
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-                                    <div class="img-box">
-                                        <img src="./img/productos/PantalonAzulMujer.png" class="img-responsive" alt="">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h4>Pantalon Azul para Mujeres</h4>
-                                        <p class="item-price"><strike>$70000.0</strike> <span>$65000.0</span></p>
-                                        <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-                                    </div>						
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-                                    <div class="img-box">
-                                        <img src="./img/productos/CamisaCeleste.png" class="img-responsive" alt="">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h4>Camisa Celeste</h4>
-                                        <p class="item-price"><strike>$55000.0</strike> <span>$50000.0</span></p>
-                                        <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-                                    </div>						
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-                                    <div class="img-box">
-                                        <img src="./img/productos/CamisaNiñoNegraBlanca.png" class="img-responsive" alt="">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h4>Promo Camisas Niño</h4>
-                                        <p class="item-price"><strike>$55000.0</strike> <span>$50000.0</span></p>
-                                        <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-                                    </div>						
-                                </div>
-                            </div>						
+                    <div>
+                        <h4> Cantidad </h4>
+                        <div>
+                            <select id="cantidadbox" name="cantselect">
+                                <option> 1 </option>
+                                <option> 2 </option>
+                                <option> 3 </option>
+                                <option> 4 </option>
+                                <option> 5 </option>
+                                <option> 6 </option>
+                                <option> 7 </option>
+                                <option> 8 </option>
+                                <option> 9 </option>
+                                <option> 10 </option>
+                                <option> 11 </option>
+                                <option> 12 </option>
+                            </select>
                         </div>
                     </div>
-                </div>
-                <!-- Carousel controls -->
-                <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                <a class="carousel-control right" href="#myCarousel" data-slide="next">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </div>
+                    <a
+                        href="./compra.php"
+                        
+                        target="_self"
+                        rel="noopeer noreferrer"
+                        >
+                        <p id="butcomprar">
+                            Comprar
+                        </p>
+                    </a>
+                </form>
             </div>
         </div>
     </main>
@@ -679,7 +558,8 @@ session_start();
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="desplegable.js"></script>
+    <script src="filtros.js"></script>
+    <script src="talle.js"></script>
 </body>
 </html>
