@@ -652,7 +652,6 @@ insert into Ropa_has_Talle_has_Modelo_has_Color values
 ("hXL", 56, "M013", "#001286"),
 ("h2XL", 56, "M013", "#001286"),
 
-
 ("hXS", 58, "M013", "#00FFFF"),
 ("hS", 58, "M013", "#00FFFF"),
 ("hM", 58, "M013", "#00FFFF"),

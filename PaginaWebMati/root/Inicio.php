@@ -363,7 +363,7 @@ session_start();
                         CON ESTILO
                     </p>
                     <a class="imgproductlink"
-                        href="./productos.php?genero=hombre?tipo=trajes?subtipo=estilo"
+                        href="./productos.php?genero=hombre&tipo=trajes&subtipo=estilo"
                         target="_self"
                         rel="noopeer noreferrer"
                     >
@@ -379,7 +379,7 @@ session_start();
                         CLÁSICOS
                     </p>
                     <a class="imgproductlink"
-                    href="./productos.php?genero=hombre?tipo=trajes?subtipo=clasicos"
+                    href="./productos.php?genero=hombre&tipo=trajes&subtipo=clasicos"
                     target="_self"
                     rel="noopeer noreferrer"
                     >
@@ -430,7 +430,7 @@ session_start();
                                     <div class="thumb-content">
                                         <h4>Cinturon Negro de Cuero</h4>									
                                         <p class="item-price"><strike>$65000.0</strike> <b>$60000.0</b></p>
-                                        <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+                                        <a href="./producto.php?codigop=33" class="btn btn-primary">Agregar al Carrito</a>
                                     </div>						
                                 </div>
                             </div>
@@ -442,7 +442,7 @@ session_start();
                                     <div class="thumb-content">
                                         <h4>Moño Negro</h4>
                                         <p class="item-price"><strike>$28000.0</strike> <b>$25000.0</b></p>
-                                        <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+                                        <a href="./producto.php?codigop=46" class="btn btn-primary">Agregar al Carrito</a>
                                     </div>						
                                 </div>
                             </div>		
@@ -454,7 +454,7 @@ session_start();
                                     <div class="thumb-content">
                                         <h4>Tirante Azul</h4>									
                                         <p class="item-price"><strike>$35000.0</strike> <b>$30000.00</b></p>
-                                        <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+                                        <a href="./producto.php?codigop=68" class="btn btn-primary">Agregar al Carrito</a>
                                     </div>						
                                 </div>
                             </div>								
@@ -466,7 +466,7 @@ session_start();
                                     <div class="thumb-content">
                                         <h4>Promo Corbatas</h4>									
                                         <p class="item-price"><strike>$35000.00</strike> <b>$30000.0</b></p>
-                                        <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+                                        <a href="./producto.php?codigop=45" class="btn btn-primary">Agregar al Carrito</a>
                                     </div>						
                                 </div>
                             </div>
@@ -482,7 +482,7 @@ session_start();
                                     <div class="thumb-content">
                                         <h4>Pantalon Marron para Hombres</h4>
                                         <p class="item-price"><strike>$75000.00</strike> <span>$70000.0</span></p>
-                                        <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+                                        <a href="./producto.php?codigop=52" class="btn btn-primary">Agregar al Carrito</a>
                                     </div>						
                                 </div>
                             </div>
@@ -494,7 +494,7 @@ session_start();
                                     <div class="thumb-content">
                                         <h4>Pantalon Azul para Mujeres</h4>
                                         <p class="item-price"><strike>$70000.0</strike> <span>$65000.0</span></p>
-                                        <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+                                        <a href="./producto.php?codigop=55" class="btn btn-primary">Agregar al Carrito</a>
                                     </div>						
                                 </div>
                             </div>
@@ -506,7 +506,7 @@ session_start();
                                     <div class="thumb-content">
                                         <h4>Camisa Celeste</h4>
                                         <p class="item-price"><strike>$55000.0</strike> <span>$50000.0</span></p>
-                                        <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+                                        <a href="./producto.php?codigop=17" class="btn btn-primary">Agregar al Carrito</a>
                                     </div>						
                                 </div>
                             </div>
@@ -518,7 +518,7 @@ session_start();
                                     <div class="thumb-content">
                                         <h4>Promo Camisas Niño</h4>
                                         <p class="item-price"><strike>$55000.0</strike> <span>$50000.0</span></p>
-                                        <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+                                        <a href="./producto.php?codigop=26" class="btn btn-primary">Agregar al Carrito</a>
                                     </div>						
                                 </div>
                             </div>						
